@@ -1,0 +1,106 @@
+<html>
+
+<title>
+	
+</title>
+
+<head>
+	<style>
+	
+	body
+	{
+		
+		margin: 0;
+	
+	}
+	
+	#container {
+		
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: black;
+		display: block;
+		background-image:url(http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Oenothera_rubricaulis_2014_G1.jpg/309px-Oenothera_rubricaulis_2014_G1.jpg);
+		background-position:50%;
+		background-repeat:no-repeat;
+		background-size:contain;
+		
+	}
+	
+	.arrow
+	
+	{
+		
+		position: fixed;
+		width:100px;
+		height:50px;
+		background-color: white;
+		color: black;
+	}
+	
+	#prev
+	{
+		
+		
+	}
+	
+	#next
+	{
+		right:0px;
+		
+	}
+	
+	</style>
+	
+	<script>
+	
+	var theURLs
+	= ["http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Dactylorhiza_fuchsii_Mariazell_01.JPG/1024px-Dactylorhiza_fuchsii_Mariazell_01.JPG"
+	"http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Lilium_bulbiferum_var._bulbiferum_01.JPG/1920px-Lilium_bulbiferum_var._bulbiferum_01.JPG",
+	"http://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Orchis-mascula-Formation.jpg/800px-Orchis-mascula-Formation.jpg"
+	"http://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Lysimachia_monelli_%28habitus%29.jpg/2560px-Lysimachia_monelli_%28habitus%29.jpg"
+	] ;
+	
+	var current = 0;
+	
+	function nextClicked()
+	{
+		
+		current = (current + 1)%4;
+		document.getElementById("container").style.backgroundImage = "url(" + theURLs[current] + ")";
+	}
+	
+	function prevClicked()
+	{
+		current = (current - 1)%4;
+		document.getElementById("container").style.backgroundImage = "url(" + theURLs[current] + ")";
+	}
+	
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<div id="container"></div>
+	<a class="arrow" href="javascript:nextClicked()"id="next">Next</a>
+	<a class="arrow" href="javascript:nextClicked()"id="prev">Previous</a>
+	<div id="caption"></div>
+	
+	
+		
+		
+		
+		
+		
+		
+	</div>
+	
+	
+	
+</body>
+
+
+</html>
